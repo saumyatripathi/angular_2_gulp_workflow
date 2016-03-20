@@ -1,9 +1,9 @@
 ## Get node dependencies
-+Run 'npm install'
++Run `npm install`
 +
 ## Regular workflow
-+run 'gulp'
-+run 'node dist/app.js'
++run `gulp`
++run `node dist/app.js`
 +
 ## Development workflow with watch and browser-sync
-+run 'gulp start'
++run `gulp start`
