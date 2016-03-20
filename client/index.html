@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <base href="/">
+    <title>Angular 2 QuickStart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+<body>
+<script src="lib/es6-shim.min.js"></script>
+    <script src="lib/system-polyfills.js"></script>
+    <script src="lib/shims_for_IE.js"></script>
+    <script src="lib/angular2-polyfills.js"></script>
+    <script src="lib/system.src.js"></script>
+    <script src="lib/Rx.js"></script>
+    <script src="lib/angular2.dev.js"></script>
+    <script src="lib/router.dev.js"></script>
+    <script src="lib/http.dev.js"></script>
+    <script>
+    System.config({
+        packages: {
+            app: {
+                format: 'register',
+                defaultExtension: 'js'
+            }
+        }
+    });
+    System.import('app/main')
+        .then(null, console.error.bind(console));
+    </script>
+    <my-app>Loading...</my-app>
+</body>
+
+</html>
