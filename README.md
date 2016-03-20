@@ -1,11 +1,9 @@
-# Angular-2 Gulp Workflow
+## Get node dependencies
+Run 'npm install'
 
-Run "npm install" to get all the dependencies
+## Regular workflow
+run 'gulp'
+run 'node dist/app.js'
 
-<h3>Regular workflow</h3>
-
-run "gulp"
-run "node dist/app.js"
-
-<h3>Development workflow with watch and browser-sync</h3>
-run "gulp start"
+## Development workflow with watch and browser-sync
+run 'gulp start'
