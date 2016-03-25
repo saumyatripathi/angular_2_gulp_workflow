@@ -11,7 +11,7 @@ var spawn = require('child_process').spawn;
 var path = require('path');
 
 gulp.task('clean', function() {
-    return del(config.distDir);
+    return del(config.distDir + '/**');
 });
 
 gulp.task('server', ['clean'], function() {
@@ -21,7 +21,7 @@ gulp.task('server', ['clean'], function() {
 
 gulp.task('lib', ['clean'], function() {
     return gulp.src(config.angularLibraries)
-        .pipe(gulp.dest(path.join(config.distDir,'client','lib')));
+        .pipe(gulp.dest(path.join(config.distDir, 'client', 'lib')));
 });
 
 gulp.task('compile-ts', ['clean'], function() {
@@ -36,12 +36,12 @@ gulp.task('compile-ts', ['clean'], function() {
 
     return tsResult.js
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(path.join(config.distDir,'client')));
+        .pipe(gulp.dest(path.join(config.distDir, 'client')));
 });
 
 gulp.task('index', ['compile-ts', 'lib', 'clean'], function() {
     return gulp.src(config.indexFile)
-        .pipe(gulp.dest(path.join(config.distDir,'client')));
+        .pipe(gulp.dest(path.join(config.distDir, 'client')));
 });
 
 gulp.task('build', ['compile-ts', 'lib', 'index', 'server']);

@@ -9,7 +9,7 @@ import {TestService} from './test.service';
 	template: `
     <h1>{{title}}</h1>
     <nav>
-      <a [routerLink]="['Test']">Test A</a>
+      <a [routerLink]="['Test']">Test</a>
       <a [routerLink]="['Test']">Another Test</a>
     </nav>
     <router-outlet></router-outlet>
